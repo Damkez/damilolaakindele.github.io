@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Damilola Akindele — GIS · Remote Sensing · Geospatial Data Science" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--card:#121732;--muted:#8ea0d0;--text:#e9eeff;--brand:#7aa2ff;--brand-2:#8bffd8;--border:rgba(255,255,255,.08)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";color:var(--text);background:radial-gradient(1200px 700px at 90% -10%, #1d2659 0%, transparent 60%),linear-gradient(180deg,#0b1020, #0b1020)}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:rgba(11,16,32,.7);backdrop-filter:saturate(150%) blur(10px);border-bottom:1px solid var(--border)}
+    nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .nav-links{display:flex;gap:18px;flex-wrap:wrap}
+    .nav-links a{padding:8px 10px;border-radius:10px;color:#dbe6ff}
+    .nav-links a:hover{background:rgba(255,255,255,.06)}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;border:1px solid var(--border);background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.02));color:var(--text)}
+    .btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px rgba(0,0,0,.2)}
+    .btn-primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0b1020;border:none}
+
+    .hero{padding:80px 0 30px}
+    .hero h1{font-size:46px;margin:0 0 6px}
+    .hero .subtitle{font-size:18px;color:var(--muted)}
+    .hero .actions{margin-top:18px;display:flex;gap:12px;flex-wrap:wrap}
+
+    section{padding:40px 0;border-top:1px solid var(--border)}
+    h2{font-size:26px;margin:0 0 20px}
+
+    /* grid cards */
+    .grid{display:grid;gap:16px}
+    @media (min-width:700px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:16px;overflow:hidden}
+    .card .content{padding:16px}
+    .eyebrow{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+    .title{font-size:16px;font-weight:600}
+    .tags{margin-top:8px;display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:4px 8px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid var(--border)}
+
+    /* timeline */
+    .timeline{display:grid;gap:20px}
+    .timeline-item{display:grid;grid-template-columns:120px 1fr;gap:16px}
+    .time{color:var(--muted);font-size:13px}
+    .pub-list{display:grid;gap:12px}
+
+    /* footer */
+    footer{padding:40px 0;border-top:1px solid var(--border);color:var(--muted)}
+
+    /* small helpers */
+    .row{display:flex;gap:16px;flex-wrap:wrap}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <a class="brand" href="#home">Your Name</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experiences</a>
+          <a href="#publications">Publications</a>
+          <a href="#achievements">Achievements</a>
+          <a href="#contact">Contact</a>
+          <a class="btn" href="assets/YourName-CV.pdf" download>Download CV</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero">
+      <div>
+        <span class="eyebrow">GIS · Remote Sensing · Geospatial Data Science</span>
+        <h1>Hi, I’m Your Name</h1>
+        <p class="subtitle">Short one‑liner about what you do and the impact you create.
+        </p>
+        <div class="actions">
+          <a class="btn-primary btn" href="#projects">See featured projects</a>
+          <a class="btn" href="#contact">Contact me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="row" style="justify-content:space-between;align-items:center">
+        <h2>Featured Projects</h2>
+        <a class="muted" href="#all-projects">All projects →</a>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <img alt="Project cover" src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800" width="100%"/>
+          <div class="content">
+            <div class="title">Land‑Use Classification with Sentinel‑2</div>
+            <p class="muted">Built a pipeline to classify crop types using Random Forest and Google Earth Engine.</p>
+            <div class="tags"><span class="tag">GEE</span><span class="tag">Python</span><span class="tag">RF</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img alt="Project cover" src="https://images.unsplash.com/photo-1482192596544-9eb780fc7f66?w=800" width="100%"/>
+          <div class="content">
+            <div class="title">Urban Heat Island Explorer</div>
+            <p class="muted">Web map to visualize LST anomalies across seasons for SE Asia.</p>
+            <div class="tags"><span class="tag">Leaflet</span><span class="tag">Raster</span><span class="tag">NetCDF</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <img alt="Project cover" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" width="100%"/>
+          <div class="content">
+            <div class="title">Flood Susceptibility Mapping</div>
+            <p class="muted">Created susceptibility indices and published an interactive dashboard.</p>
+            <div class="tags"><span class="tag">QGIS</span><span class="tag">Dash</span><span class="tag">GLCM</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p><strong>City, Country</strong> — Replace this with a concise, third‑person bio (3–4 sentences). Mention your focus areas and what problems you like to solve.</p>
+      <div class="row">
+        <div class="card" style="flex:1">
+          <div class="content">
+            <div class="title">Academic Background</div>
+            <ul>
+              <li>MSc in Remote Sensing, University, 2024</li>
+              <li>BSc in GIS, University, 2022</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card" style="flex:1">
+          <div class="content">
+            <div class="title">Skills</div>
+            <p class="muted">Python (pandas, rasterio), Google Earth Engine, QGIS, ArcGIS, GDAL, PostGIS, Leaflet, Dash</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Professional / Research Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item card">
+          <div class="content" style="grid-column:1/3">
+            <div class="row" style="justify-content:space-between">
+              <div class="title">Geospatial Data Scientist — Company</div>
+              <div class="time">2023 — Present</div>
+            </div>
+            <ul>
+              <li>Built ETL for satellite scenes to parquet; reduced processing time by 40%.</li>
+              <li>Shipped cloud‑hosted dashboard for internal stakeholders.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item card">
+          <div class="content" style="grid-column:1/3">
+            <div class="row" style="justify-content:space-between">
+              <div class="title">Research Assistant — Lab</div>
+              <div class="time">2022 — 2023</div>
+            </div>
+            <ul>
+              <li>Published on multi‑temporal change detection using SAR + optical fusion.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px"><a class="muted" href="#all-experiences">All experiences →</a></div>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <ol class="pub-list">
+        <li>Lastname, Y. (2024). <em>Title of your paper.</em> Journal. <a href="#">DOI</a></li>
+        <li>Lastname, Y. (2023). <em>Another study.</em> Conference. <a href="#">PDF</a></li>
+      </ol>
+      <div style="margin-top:10px"><a class="muted" href="#all-publications">All publications →</a></div>
+    </section>
+
+    <section id="achievements">
+      <h2>Achievements & Activities</h2>
+      <ul>
+        <li>Winner — GeoHack 2024</li>
+        <li>Mentor — Open Source Geo</li>
+        <li>Volunteer — Mapathon XYZ</li>
+      </ul>
+    </section>
+
+    <section id="services">
+      <h2>Services</h2>
+      <div class="grid">
+        <div class="card"><div class="content"><div class="title">Consulting</div><p class="muted">Short description of how you help clients.</p></div></div>
+        <div class="card"><div class="content"><div class="title">Training & Workshops</div><p class="muted">Short description.</p></div></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Want to collaborate?</h2>
+      <p class="muted">For a prompt response, please email me or use the form.</p>
+      <div class="card">
+        <div class="content">
+          <form action="https://formspree.io/f/your-id" method="POST">
+            <div class="row">
+              <input name="name" placeholder="Your name" required style="flex:1;padding:12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--text)"/>
+              <input name="email" type="email" placeholder="Email" required style="flex:1;padding:12px;border-radius:10px;border:1px solid var(--border);background:transparent;color:var(--text)"/>
+            </div>
+            <textarea name="message" placeholder="Your message" required rows="5" style="margin-top:10px;width:100%;padding:12px;border-radius:12px;border:1px solid var(--border);background:transparent;color:var(--text)"></textarea>
+            <button class="btn btn-primary" style="margin-top:10px" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
+      <p class="muted" style="margin-top:10px">Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="row" style="justify-content:space-between;align-items:center">
+        <div>© <span id="year"></span> Your Name — All rights reserved.</div>
+        <div class="muted">
+          <a href="#about">About</a> · <a href="#projects">Projects</a> · <a href="#experience">Experiences</a> · <a href="#publications">Publications</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
